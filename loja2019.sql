@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 10.129.76.12
--- Tempo de geração: 21/10/2019 às 23:04
+-- Tempo de geração: 22/10/2019 às 16:30
 -- Versão do servidor: 5.6.26-log
 -- Versão do PHP: 5.6.12
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `qc_clientes` (
 
 INSERT INTO `qc_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`, `cli_numero`, `cli_bairro`, `cli_cidade`, `cli_uf`, `cli_cep`, `cli_cpf`, `cli_rg`, `cli_ddd`, `cli_fone`, `cli_celular`, `cli_email`, `cli_pass`, `cli_data_nasc`, `cli_data_cad`, `cli_hora_cad`) VALUES
 (1, 'Raphael Renan', 'Santos Castro', 'Rua Diana', '990, Apto-21', 'Perdizes', 'São Paulo', 'SP', '05019000', '31485353831', '322533910', 11, '956804182', '956804182', 'raphaelrenan1@hotmail.com', 'b64a0a4ed2eee11e4c0bf9d3f7f1cf1d', '1984-02-21', '2019-10-21', '18:55:01'),
-(2, 'Blue Service', 'Softwares', 'Alameda Ministro Rocha Azevedo', '1077', 'Cerqueira César', 'São Paulo', 'SP', '01410003', '00808641808', '123456', 11, '30832081', '30832081', 'obreiroraphaelrenan@hotmail.com', 'b64a0a4ed2eee11e4c0bf9d3f7f1cf1d', '1998-01-01', '2019-10-21', '19:57:48');
+(2, 'Blue Service', 'Softwares', 'Alameda Ministro Rocha Azevedo', '1077', 'Cerqueira César', 'São Paulo', 'SP', '01410003', '00808641707', '123456', 11, '30832081', '30832081', 'testeblueservice@hotmail.com', 'b64a0a4ed2eee11e4c0bf9d3f7f1cf1d', '1998-01-01', '2019-10-21', '19:57:48');
 
 -- --------------------------------------------------------
 
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `qc_imagens` (
   `img_nome` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `img_pro_id` int(11) NOT NULL,
   `img_pasta` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Fazendo dump de dados para tabela `qc_imagens`
@@ -184,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `qc_produtos` (
   `pro_fabricante` int(11) NOT NULL,
   `pro_ativo` char(1) COLLATE utf8_unicode_ci NOT NULL,
   `pro_frete_free` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Não'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
 
 --
 -- Fazendo dump de dados para tabela `qc_produtos`
@@ -202,7 +202,39 @@ INSERT INTO `qc_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `p
 (9, 5, 'Sapatênis Burn York', 'Aposte em combinações masculinas para o “casual day” com o Sapatênis Burn York. Conferindo versatilidade ao visual, o modelo inspirado no esporte tem perfuros laterais e detalhe em ilhós colorido.', 0.100, 250.00, 50, 50, 50, 'sapatenis-burn.jpg', 'sapatenis-burn', 20, '84484884', '84845226', 1, '1', 'Não'),
 (10, 5, 'Sapatênis Calvin Klein Boat Lth', 'O Sapatênis Calvin Klein Boat Lth é confeccionado em couro, que oferece ótima durabilidade. Leva um estilo casual e sofisticado às combinações, tem interior macio e fechamento por cadarço. ', 0.100, 300.00, 50, 50, 50, 'sapatenis-calvin-klein.jpg', 'sapatenis-calvin-klein', 10, '19855648', '4648848', 1, '1', 'Não'),
 (15, 2, 'Camisa Polo Aleatory', '<p>&nbsp;<strong>Especifica&ccedil;&atilde;o:</strong> malha piquet branca;gola e punho em poli&eacute;ster branco; com serigrafia do bras&atilde;o da repblica em policromia do lado<br />esquerdo do peito medindo 10x12 cm e impresso nas costas com o nome &ldquo;JUSTI&Ccedil;A ELEITORAL&rdquo;medindo 25 cm</p>', 0.400, 500.00, 10, 10, 10, '170906182225camiseta.jpg.jpg', 'camisa-polo-aleatory', 10, '45458858', '555545', 0, 'S', 'Não'),
-(16, 4, 'Tênis Mizuno Wave', '<p>O T&ecirc;nis Mizuno Wave Elevation 2 proporciona muito mais conforto durante as suas corridas. Com nova entressola absorve os impactos e garante uma melhor estabilidade durante as pisadas.</p>', 0.200, 600.00, 10, 10, 10, 'becc656f4f046fc4f18e3f8324059cad.jpg', 'tenis-mizuno-wave', 10, '45484448', '488964', 0, 'S', 'Não');
+(16, 4, 'Tênis Mizuno Wave', '<p>O T&ecirc;nis Mizuno Wave Elevation 2 proporciona muito mais conforto durante as suas corridas. Com nova entressola absorve os impactos e garante uma melhor estabilidade durante as pisadas.</p>', 0.200, 600.00, 10, 10, 10, 'becc656f4f046fc4f18e3f8324059cad.jpg', 'tenis-mizuno-wave', 10, '45484448', '488964', 0, 'S', 'Não'),
+(17, 1, 'Terno Azul Marinho Xadrez', 'Tecidos confeccionadas no mais alto padrão de qualidade do mercado', 0.100, 650.00, 50, 50, 50, 'terno-azulm-xadrez.jpg', 'terno-zul-marinho-xadrez', 10, 'azulmarinhoxadrez', 'emanu1596', 1, '1', 'Não');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `qc_produtos_categorias`
+--
+
+CREATE TABLE IF NOT EXISTS `qc_produtos_categorias` (
+`procate_id` int(11) NOT NULL,
+  `procate_proid` int(11) NOT NULL,
+  `procate_cateid` int(11) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Fazendo dump de dados para tabela `qc_produtos_categorias`
+--
+
+INSERT INTO `qc_produtos_categorias` (`procate_id`, `procate_proid`, `procate_cateid`) VALUES
+(1, 1, 2),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 3),
+(5, 5, 4),
+(6, 6, 4),
+(7, 7, 4),
+(8, 8, 4),
+(9, 9, 5),
+(10, 10, 5),
+(11, 15, 2),
+(12, 16, 4),
+(13, 17, 1);
 
 --
 -- Índices de tabelas apagadas
@@ -245,6 +277,12 @@ ALTER TABLE `qc_produtos`
  ADD PRIMARY KEY (`pro_id`);
 
 --
+-- Índices de tabela `qc_produtos_categorias`
+--
+ALTER TABLE `qc_produtos_categorias`
+ ADD PRIMARY KEY (`procate_id`);
+
+--
 -- AUTO_INCREMENT de tabelas apagadas
 --
 
@@ -262,7 +300,7 @@ MODIFY `cli_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT de tabela `qc_imagens`
 --
 ALTER TABLE `qc_imagens`
-MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de tabela `qc_pedidos`
 --
@@ -277,7 +315,12 @@ MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 -- AUTO_INCREMENT de tabela `qc_produtos`
 --
 ALTER TABLE `qc_produtos`
-MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT de tabela `qc_produtos_categorias`
+--
+ALTER TABLE `qc_produtos_categorias`
+MODIFY `procate_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
