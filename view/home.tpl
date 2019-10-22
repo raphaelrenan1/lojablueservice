@@ -1,0 +1,1 @@
+<center><img src="{$BANNER}" class='img img-responsive img-rounded'></img></center>
